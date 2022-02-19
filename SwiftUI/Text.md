@@ -1,0 +1,7 @@
+# Text 
+
+> font
+
+> foregroundColor 
+
+> padding 
