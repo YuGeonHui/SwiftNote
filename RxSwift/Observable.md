@@ -1,7 +1,6 @@
 # Observable 이란 
 
 ## Observable의 전체 개념은 구독(Subscribe)할 수 있고, 해당 이벤트를 얻을 수 있다. 
-
 ### 1) Just: Observable의 1개의 원소를 그대로 방출
 ```swift
 let observable = Observable.just(1) 
