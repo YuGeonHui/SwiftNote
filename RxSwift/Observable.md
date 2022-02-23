@@ -29,3 +29,5 @@ observable.subscribe(onNext: { element
   print(element)
 })
 ```
+
+# DisposeBag 
