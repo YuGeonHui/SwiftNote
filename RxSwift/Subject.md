@@ -18,7 +18,7 @@
 ```swift
 let subject = PublishSubject<String>()
   
-subject.onNext("Test1") // 전달되지 않는다.  
+subject.onNext("Test1") // subject를 구독하지 않아 전달되지 않는다.  
   
 subject.subscribe { event in
   print(event)  
