@@ -12,7 +12,7 @@ let disposeBag = DisposeBag()
 
 strikes.elementAt(2)
   .subscribe(onNext: { print("Return") }
-  .disposed(by: disposeBag)
+  .disposed(by: self.disposeBag)
   
 strikes.onNext("0")
 strikes.onNext("1")
@@ -24,7 +24,7 @@ strikes.onNext("2") // Return이 출력된다.
 Observable.of(1, 2, 3, 4, 5, 6, 7)
   .filter { $0 % 2 == 0 }
   .subscribe(onNext: { print($0) } // 2, 4, 6이 출력된다. 
-  .disposed(by: disposeBag) 
+  .disposed(by: self.disposeBag) 
 ```
 ## Skip과 take 연산자는 서로 비슷하지만 아예 다른 연산자이다.
 
@@ -34,7 +34,7 @@ Observable.of(1, 2, 3, 4, 5, 6, 7)
 Observable.of("A", "B", "C", "D", "E", "F")
   .skip(4)
   .subscribe(onNext: { print($0) } // E, F이 출력된다. 
-  .disposed(by: disposeBag)  
+  .disposed(by: self.disposeBag)  
 ```
 
 # SkipWhile
@@ -43,7 +43,7 @@ Observable.of("A", "B", "C", "D", "E", "F")
 Observable.of(2, 2, 3, 4, 4)
   .skipWhile { $0 % 2 == 0 }
   .subscribe(onNext: { print($0) } // 3, 4, 4이 출력된다. 
-  .disposed(by: disposeBag)  
+  .disposed(by: self.disposeBag)  
 ```
 
 # SkipUntil 
@@ -55,7 +55,7 @@ let disposeBag = DisposeBag()
 
 subject.skipUntil(triger)
   .subscribe(onNext: { print($0) }
-  .disposed(by: disposeBag)
+  .disposed(by: self.disposeBag)
   
 subject.onNext("0")
 subject.onNext("1")
@@ -71,7 +71,7 @@ subject.onNext("3") // 3
 Observable.of(1, 2, 3, 4, 5, 6)
   .take(3)
   .subscribe(onNext: { print($0) } // 1, 2, 3이 출력된다. 
-  .disposed(by: disposeBag)  
+  .disposed(by: self.disposeBag)  
 ```
 
 # TakeWhile 
@@ -80,7 +80,7 @@ Observable.of(1, 2, 3, 4, 5, 6)
 Observable.of(2, 4, 6, 7, 8, 10)
   .takeWhile { return $0 % 2 == 0 }
   .subscribe(onNext: { print($0) } // 2, 4, 6이 출력된다. 
-  .disposed(by: disposeBag)  
+  .disposed(by: self.disposeBag)  
 ```
 
 # TakeUntil 
@@ -92,7 +92,7 @@ let disposeBag = DisposeBag()
 
 subject.takeUntil(triger)
   .subscribe(onNext: { print($0) }
-  .disposed(by: disposeBag)
+  .disposed(by: self.disposeBag)
   
 subject.onNext("0")
 subject.onNext("1") // 0, 1 출력 
