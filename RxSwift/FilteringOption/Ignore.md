@@ -1,9 +1,6 @@
 # Ignore 
-
 - next 이벤트를 금지 시키는 필터이다.
 - completed(), error()는 사용이 가능하다. 
-
-
 
 # ElementAt 
 - Observable에서 발생하는 이벤트 중 n번째 이벤트만 받고 싶은 경우 사용한다. 
@@ -29,6 +26,7 @@ Observable.of(1, 2, 3, 4, 5, 6, 7)
   .subscribe(onNext: { print($0) } // 2, 4, 6이 출력된다. 
   .disposed(by: disposeBag) 
 ```
+## Skip과 take 연산자는 서로 비슷하지만 아예 다른 연산자이다.
 
 # Skip 
 - 해당 연산자에 들어오는 값만 큼 이벤트를 무시 할 수 있는 함수   
@@ -49,7 +47,7 @@ Observable.of(2, 2, 3, 4, 4)
 ```
 
 # SkipUntil 
-- next 이벤트를 금지 시키는 필터이다.
+- 두개의 시퀀스가 존재할 때, 두 시퀀스에서 모두 .next이벤트가 발생해야 값을 전달한다.
 ```swift
 let subject = PublishSubject<String>()
 let triger = PublishSubject<String>()
@@ -67,11 +65,38 @@ subject.onNext("3") // 3
 ```
 
 # Take 
-- 해당 값에 들어 온 값 만큼만 출력하는 함수 
+- skip과 정반대의 개념을 지니고 있다.
+- 처음 발생하는 n개의 이벤트만 출력이 가능하다.
+```swift
+Observable.of(1, 2, 3, 4, 5, 6)
+  .take(3)
+  .subscribe(onNext: { print($0) } // 1, 2, 3이 출력된다. 
+  .disposed(by: disposeBag)  
+```
 
 # TakeWhile 
-- 특정조건이 거짓이 되면 더 이상 항목을 제공하지 않는다.
+- 특정조건이 거짓이 되면 그 이후의 모든 이벤트는 무시가된다. 
+```swift
+Observable.of(2, 4, 6, 7, 8, 10)
+  .takeWhile { return $0 % 2 == 0 }
+  .subscribe(onNext: { print($0) } // 2, 4, 6이 출력된다. 
+  .disposed(by: disposeBag)  
+```
 
 # TakeUntil 
-- next 이벤트를 금지 시키는 필터이다.
-- completed(), error()는 사용이 가능하다. 
+- 두개의 시퀀스가 존재할 때, 두 시퀀스에서 모두 .next이벤트가 발생하는 경우 전달을 멈춘다.
+```swift
+let subject = PublishSubject<String>()
+let triger = PublishSubject<String>()
+let disposeBag = DisposeBag()
+
+subject.takeUntil(triger)
+  .subscribe(onNext: { print($0) }
+  .disposed(by: disposeBag)
+  
+subject.onNext("0")
+subject.onNext("1") // 0, 1 출력 
+
+triger.onNext("trigger!!!")
+subject.onNext("3") // 더 이상 값이 출력되지 않는다. 
+```
