@@ -4,8 +4,12 @@
 3. ScreenShot of your code
 4. ScrennShot of the debug console
 
-
-
+# 버그가 발생 했을 때, 접근법 
+1. What did you expect your code to do?
+2. What happened instead?
+3. what does your expectation depend upon?
+4. How can we test the things our expectations depend on?
+5. Fix our code to make reailty match expectations
 
 # 개발 시, 참고하면 좋은 사이트 
 1. [이미지 파일 생성](https://appicon.co/#image-sets)
