@@ -6,3 +6,66 @@
 4. 프로토콜을 채택하면 내부에서 프로토콜 내부의 것들을 구현해야만 한다. 
 5. 상속과 프로토콜을 동시에 사용해야 하는 경우 -> 상속이후 프로콜을을 선언하면 된다.
 6. Swift에서 Delegate Pattern을 작동하게 만드는 기술이다. 
+
+```swift
+protocol AdvancedLifeSupport {
+  func performCPR() 
+}
+
+class EmergencyCallHandler {
+  var delegate: AdvancedLifeSupport?
+  
+  func assessSituation() {
+    print("Can you tell me what happend?")
+  }
+  
+  func medicalEmergency() {
+    delegate?.performCPR() // 어떤 delegate인지 신경 쓰지 않는다. 
+  }
+}
+
+Struct Paramedic: AdvancedLifeSupport {
+  
+  init(handler: EmergencyCallHandler) {
+    handler.delegate = self
+   }
+  
+  func performCPR() {
+    print("The paramedic does chest compressions, 30 per seconds.")
+  }
+}
+
+class Doctor: AdvancedLifeSupport {
+
+  init(handler: EmergencyCallHandler) {
+    handler.delegate = self
+  }
+
+  func performCPR() {
+    print("The paramedic does chest compressions, 30 per seconds.")
+  }
+
+  func useStethescope() {
+    print("Listening for heart sounds")
+  }
+}
+
+class Surgeon: Doctor {
+
+  override func performCPR() {
+    super.performCPR()
+    print("Sings statying alive by the BeeGees")
+  }
+  
+  func useElectricDrill() {
+    print("Whirr...")
+  }
+}
+
+let emilio = EmergencyCallHandler()
+// let pete = Paramedic(handler: emilio)
+let angela = Surgeon(handler: emilio)
+
+emilio.assessSituation()
+emilio.medicalEmergency()
+```
