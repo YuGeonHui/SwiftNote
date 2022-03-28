@@ -7,3 +7,21 @@
 3. 클래스는 참조형태 값으로 저장(let) / 구조체는 복사본 생성 (var)
 5. 내부에서 값을 변경할 때, struct는 mutating 키워드가 필요하다.
 6. 구조체는 값으로 전달된다. 
+7. 구조체는 Referencing Count가 증가하지 않고, 클래스는 증가한다.
+
+```swift
+Struct StructName {
+	property
+	method
+	initializer
+	subscript
+}
+
+class ClassName {
+	property
+	method
+	initializer
+	deinitializer
+	subscript
+}
+```
