@@ -16,8 +16,11 @@
 1. [이미지 파일 생성](https://appicon.co/#image-sets)
 2. [이미지 생성](https://www.canva.com/ko_kr/)
 3. [Color Hunt](https://colorhunt.co)
-4. [Cocoapods](https://cocoapods.org)
-5. [Firebase](https://firebase.google.com)
+4. [UIColor XYZ](https://www.uicolor.io/)
+5. [Flat UIColor](https://flatuicolors.com/)
+6. [Font Google](https://fonts.google.com/)
+7. [Cocoapods](https://cocoapods.org)
+8. [Firebase](https://firebase.google.com)
 
 # 유용한 라이브러리 
 1. [IQKeyboardManger](https://github.com/hackiftekhar/IQKeyboardManager)
