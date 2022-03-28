@@ -10,7 +10,7 @@
 7. 구조체는 Referencing Count가 증가하지 않고, 클래스는 증가한다.
 
 ```swift
-Struct StructName {
+struct StructName {
 	property
 	method
 	initializer
