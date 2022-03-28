@@ -11,17 +11,17 @@
 
 ```swift
 struct StructName {
-	property
-	method
-	initializer
-	subscript
+   property
+   method
+   initializer
+   subscript
 }
 
 class ClassName {
-	property
-	method
-	initializer
-	deinitializer
-	subscript
+   property
+   method
+   initializer
+   deinitializer
+   subscript
 }
 ```
