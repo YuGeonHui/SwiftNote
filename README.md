@@ -5,6 +5,6 @@
 
 > * [SwiftUI](https://github.com/YuGeonHui/SwiftNote/tree/main/SwiftUI)
 > * [RxSwift](https://github.com/YuGeonHui/SwiftNote/tree/main/RxSwift)
-> * [iOS](https://github.com/YuGeonHui/SwiftNote/tree/main/)
+> * [iOS](https://github.com/YuGeonHui/SwiftNote/tree/main/iOS.md)
 
 
