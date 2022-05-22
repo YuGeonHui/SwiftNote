@@ -9,7 +9,7 @@
 - Presentation: 셀을 어떻게 표현할거야?
 - Layout: 셀들 레이아웃을 어떻게 할거야?
 
-## UITableview vs. UICollectionView
+## UITableview vs UICollectionView
 - UICollectionView가 자유도도 높고, UITableView로 표현할 수 있는것도 커버가 가능하다.
 - 구현 난이도가 2개의 차이가 많이 있지 않다.
 
