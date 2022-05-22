@@ -18,8 +18,8 @@ textField.onNext("Sw")
 textField.onNext("Swif")
 textField.onNext("Swift")
 
-button.onNext(()) // swift
-button.onNext(()) // swift 
+button.onNext(()) // Swift
+button.onNext(()) // Swift 
 
 ```
 
