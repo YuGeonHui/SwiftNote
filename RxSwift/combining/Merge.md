@@ -1,6 +1,7 @@
 # merge
 
-- 여러 옵저버블이 방출될 때, 그 시간 순서에 따라서 값을 방출한다. 
+- 방출되는 값을 병합하여 항목을 하나로 결합
+- 병합 연산자를 사용하여 여러 관측치의 출력을 결합하여 단일 관측치처럼 작동할 수 있다.
 
 <img width="747" alt="image" src="https://user-images.githubusercontent.com/96224311/169683407-7d6e990b-8e84-4c39-aeff-02cac0fc6817.png">
 
