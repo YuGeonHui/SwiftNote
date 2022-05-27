@@ -2,6 +2,7 @@
 
 > DataBinding 이란 ?
 - View Model과 View Controller는 서로에게 데이터의 변경을 알려줄 수 있는 방법이 필요합니다.
+- 그 방법을 DataBinding 이라고 한다.
 
 > DataBiding의 종류
 1. Observables
