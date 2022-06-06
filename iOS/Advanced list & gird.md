@@ -32,3 +32,27 @@ struct MyModel: Hashable {
     return lhs.identifier == rhs.identifier 
    }
 ```
+
+# Compositional Layout 
+
+![image](https://user-images.githubusercontent.com/96224311/172155313-7ee3a3ac-da4f-4b33-905f-5ace8b787806.png)
+```swift
+let size = NSCollectionLayoutSize(widthDimension: .fractionWidth(1.0), heightDemension: .abosolute(44.0))
+let item = NSCollectionLayoutItem(layoutSize: size)
+let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
+let section = NsCollectionLayoutSection(group: group)
+let layout = UICollectionViewCompositionalLayout(section: section)
+```
+
+# Summary 
+- 기존 UICollectionView에서 Data, Presentation 구현 방법은 에러가 발생할 수 있다.
+> AS-IS : UICollectionViewDataSource
+> TO-BE : UICollectionViewDiffableDataSource 
+
+- 기존 UICollectionView에서 layout 구현관련에서 복잡한 구현 시, 난이도가 올라간다.
+> AS-IS : UICollectionViewFlowLayout
+> TO-BE : UICollectionViewCompositionalLayout 
+
+# 참고 
+- [https://developer.apple.com/videos/play/wwdc2019/220/](https://developer.apple.com/videos/play/wwdc2019/220/)
+- [https://developer.apple.com/videos/play/wwdc2019/215/](https://developer.apple.com/videos/play/wwdc2019/215/)
