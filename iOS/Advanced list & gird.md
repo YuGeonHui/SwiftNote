@@ -1,5 +1,6 @@
 # 리스트 및 그리드 그리는 방밥 (Advanced)
 
+![Uploading image.png…]()
 ![image](https://user-images.githubusercontent.com/96224311/172026267-60a1c22d-fda0-4958-b2b9-7b5332475872.png)
 - 기존구현은 간단하고 유연하다.
 - 보통 Controller가 데이터를 받아와서, UI에게 변경을 알림
