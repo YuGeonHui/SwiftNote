@@ -1,4 +1,4 @@
-# 리스트 및 그리드 그리는 방밥 (Advanced)
+# 리스트 및 그리드 그리는 방법 (Advanced)
 
 ![image](https://user-images.githubusercontent.com/96224311/172143539-1c0e593a-e7f2-4a0e-985f-b0c9d948a1aa.png)
 ![image](https://user-images.githubusercontent.com/96224311/172026267-60a1c22d-fda0-4958-b2b9-7b5332475872.png)
