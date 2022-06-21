@@ -5,3 +5,14 @@
 2. width, height -> CGSize(CGFloat)
 
 - CGRect -> CGPoint와 CGSize를 품은 객체 
+
+```swift
+public struct CGPoint {
+
+  public var x: CGFloat
+  public var y: CGFloat
+  public init()
+  public init(x: CGFloat, y: CGFloat)
+}
+```
+
