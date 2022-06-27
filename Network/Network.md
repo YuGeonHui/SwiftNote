@@ -36,8 +36,7 @@
         
 ### URLSession  구조도
     
-    ![URLSessionTask.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eae78563-596e-4e35-b325-b4a2d84d0199/URLSessionTask.png)
-    
+![image](https://user-images.githubusercontent.com/96224311/175946855-8895b34d-b6c0-4d1b-b866-ea051f45b69b.png)
 
 # Codable
 - swift 객체를 외부 데이터 형태(주로 JSON)로 인코딩, 디코딩 가능하게 해주는 타입
