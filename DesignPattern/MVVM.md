@@ -3,13 +3,10 @@
 ### 기존 MVC 패턴의 문제
 
 - 애플에서 가이드 하던 MVC 패턴
-    
-    ![mvvm1_16d8161.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9c3198a2-cea6-44d0-a946-7ed8da6c1b70/mvvm1_16d8161.png)
-    
+![image](https://user-images.githubusercontent.com/96224311/177000472-74ce2205-9316-43dc-9e7d-675a6c962f6f.png)    
 - `view` `view controller`  이 둘은 View 와 Controller 레이어로 나누어서 설명은 했지만,
 - 실제로 구현을 할때는 이둘은 거의 분리되지 않음
-    
-    ![intermediate_5287a0c.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4ee004b-8a67-4fb8-bff4-97efbeca9478/intermediate_5287a0c.png)
+![image](https://user-images.githubusercontent.com/96224311/177000479-1b66b700-1968-4681-a281-392b42128e1e.png)
     
 - 따라서, 위와 그림과 같이 표현되는게 좀 더 현실모습을 잘 담고 있음
 - 이러다 보니, `View Controller` 에 많은 로직들이 존재하게됨
@@ -43,9 +40,7 @@
 - MVVM 약자?
     - Model - View - ViewModel
 - MVVM 구조
-    
-    ![mvvm_b27768d.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/791ba970-cd25-4358-a0ea-39147c82ef77/mvvm_b27768d.png)
-    
+![image](https://user-images.githubusercontent.com/96224311/177000497-ba630a2d-e55c-408f-85af-4e66e59d67b3.png)
 - ViewController 는 ViewModel 을 들고 있음
 - ViewModel 은 Model(Data) 을 들고 있음
 - ViewModel 은 아래의 역할을 함
