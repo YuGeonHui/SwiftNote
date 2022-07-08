@@ -33,7 +33,7 @@ subject.onNext("Item4") // onCompleted() 가 출력되었기 때문에 해당라
 
 ### BehaviorSubject 
 
-- 초기 값을 설정해야 하는 Subject 이다.
+- 초기 값(value)을 설정해야 하는 Subject 이다.
 - 구독 하는 시점에서 과거에 갱신된 데이터중 가장 최근의 값이 필요할 때 사용하면 좋다.
 
 ```swift
