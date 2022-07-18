@@ -1,4 +1,4 @@
-## Label 
+## UILabel 
 - 하나 이상의 정보 텍스트를 표시하는 View.
 
 ### Label의 속성 
