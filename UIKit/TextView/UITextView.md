@@ -22,3 +22,64 @@
     textView.scrollIndicatorInsets = UIEdgeInsets(top: 30, left: 0, bottom: 30, right: 0)
 }
 ```
+
+## AttachView 
+- textView내부에 Image를 Attach하는 경우 사용한다.
+- NSTextAttach()를 사용해서 구현한다. 
+```swift
+class ImageAttachmentViewController: UIViewController {
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    let logo = UIImage(named: "logo")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let attachment = NSTextAttachment()
+        attachment.image = logo
+        
+        let attStr = NSAttributedString(attachment: attachment)
+        textView.textStorage.insert(attStr, at: 0)
+    }
+}
+```
+
+## Selection 
+- TextView 내부에서 해당되는 문자를 찾을 수 있다.
+- scrollToRange 메서드를 사용하여, 해당 문자열로 이동도 가능하다.
+```swift 
+class TextSelectionViewController: UIViewController {
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var selectedRangeLabel: UILabel!
+    
+    @IBAction func selectLast(_ sender: Any) {
+        
+        let lastWord = "pariatur?"
+        
+        if let text = textView.text as NSString? {
+            
+            let range = text.range(of: lastWord)
+            textView.selectedRange = range
+            textView.scrollRangeToVisible(range)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+                
+    }
+}
+
+extension TextSelectionViewController: UITextViewDelegate {
+    
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        
+        let range = textView.selectedRange
+        selectedRangeLabel.text = "\(range)"
+    }
+    
+}
+```
