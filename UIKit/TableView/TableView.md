@@ -5,6 +5,17 @@
 - ```TableView```는 주로 세로로 스크롤 하는경우의 사용한다.
 > 가로로도 구현이 가능하긴 하지만, 가로로 구현하는 경우에는 collectionView를 사용한다.
 
+## TableView Tip
+1. Storyboard에 TableView를 Setting한다.
+2. Cell을 지정해준다. (indentified 설정 필수)
+3. Datasoure, Delegate 설정
+4. 필수 메서드 구현!!
+
+## TableView를 구성하는 것
+1. ContentView
+2. Accessroy View
+3. Eidting Control
+
 ## Table View의 Style
 1. Group Style -> 아이폰 설정 화면
 2. Plain Style -> 아이폰 지역 화면
