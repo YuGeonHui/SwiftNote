@@ -18,7 +18,7 @@ struct Countdown: Sequence {
     }
 }
 
-// 
+// IteratorProtocol을 구현하는 구조체 만들기
 struct CountdownIterator: IteratorProtocol {
     let countdown: Countdown
     var currentValue = 0
@@ -40,6 +40,8 @@ struct CountdownIterator: IteratorProtocol {
 }
 
 let countdown = Countdown(start: 10)
+
+// for-in loop에서 사용가능!!
 for count in countdown {
     print(count)
 }
