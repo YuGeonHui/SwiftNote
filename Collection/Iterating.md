@@ -4,6 +4,7 @@
 
 ## Sequence
 - 한 번에 하나씩 단계별로 진행할 수 있는 값 목록이다. (list of value)
+- Countdown 구조체에 for-in loop를 사용할 수 있도록 예제를 구현
 
 ```swift 
 
@@ -11,11 +12,13 @@ struct Countdown: Sequence {
     
     let start: Int
     
+    // required method
     func makeIterator() -> some IteratorProtocol {
         return CountdownIterator(self)
     }
 }
 
+// 
 struct CountdownIterator: IteratorProtocol {
     let countdown: Countdown
     var currentValue = 0
