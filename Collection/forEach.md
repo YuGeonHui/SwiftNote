@@ -20,6 +20,7 @@ func addToFavoriteList(_ movie: Movie) {
     
 }
 
+// index를 같이 출력하기 위해 enumerated()를 사용한다.
 movies.enumerated().forEach { (index, movie) in
     print("Movie at \(index) has a title \(movie.title)")
 }
