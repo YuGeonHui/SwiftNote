@@ -33,5 +33,29 @@ func firstLast<T>(_ list: [T]) -> (T, T) {
 
 - 위처럼 함수를 변환하면 된다. <T>는 타입을 나타내게 된다. 
 - 해당 기능을 통해서, 전체 코드를 살펴보면 
-  
- 
+
+```swift 
+import UIKit
+
+struct Movie {
+    let name: String
+}
+
+let numbers = [1,2,3,5,6,7,10]
+let names = ["Alex", "John", "Mary", "Steve"]
+let movies = [Movie(name: "Batman"), Movie(name: "Spiderman"), Movie(name: "Superman")]
+
+func firstLast<T>(_ list: [T]) -> (T, T) {
+    return (list[0], list[list.count - 1] )
+}
+
+let (first, last) = firstLast(movies)
+
+//let (first, last) = firstLast(numbers)
+//let (first, last) = firstLast(names)
+
+print(first)
+print(last)
+
+
+```
