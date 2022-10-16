@@ -1,7 +1,7 @@
 ## generic에 대해서 더 알아보자 
 
 - 아래와 같은 3가지의 배열이 존재할 때 
-- 
+
 ```swift 
 struct Movie: Equatable {
     let name: String
