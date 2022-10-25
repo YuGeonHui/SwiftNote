@@ -23,9 +23,9 @@ class BankAccount {
         self.balance = balance
     }
     
-    func withdraw(amount: Double) throws {
+    func withdraw(amount: Double) throws { // 오류가 발생할 가능성이 있는 메서드 옆에 적어준다.
         if balance < amount {
-            throw BankAccountError.insufficientFunds
+            throw BankAccountError.insufficientFunds // 오류가 발생할 구간에서 적어준다.
         }
         
         balance -= amount
@@ -34,7 +34,9 @@ class BankAccount {
 }
 ```
 - 해당 함수를 실행하기 위해서는 try를 통해 사용해야 한다.
-- 해당 함수를 사용하려면 아래와 같이 사용하면된다.
+- 오류 처리는 do-catch와 try를 통해 사용한다. (오류 처리하는 간단한 방법)
+- try : 이 함수가 오류가 발생할 가능성이 있기 때문에, 한 번 시도해보겠습니다!!
+- catch 내부에서 switch문을 통해 에러를 분기 할 수도 있다.
 ```swift
 let account = BankAccount(balance: 100)
 
