@@ -1,7 +1,6 @@
 ## Chaning Optional
 
 - 아래와 같은 구조체가 존재할 때, 학점에 다가가기 위해 옵셔널 래핑을 일반적으로 진행하는 경우 
-- 
 ```swift 
 import UIKit
 
