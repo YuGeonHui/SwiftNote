@@ -69,3 +69,8 @@ let angela = Surgeon(handler: emilio)
 emilio.assessSituation()
 emilio.medicalEmergency()
 ```
+
+# 프로토콜 개념 추가
+- 프로토콜은 1급 객체이다. (타입으로 사용이 가능)
+- 프로토콜에서는 최소한의 것만 구현 하면된다. (함수의 헤더, 변수)
+- 프로토콜의 확장을 통해 구현하는 경우 기본구현으로 적용 가능하다. (반복적으로 같은 코드를 작성해야 하는경우)
